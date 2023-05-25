@@ -1,4 +1,6 @@
+"use client"
 
+import MenuItems from '../Dropdown/MenuItems';
 
 export const menuItems = [
   {
@@ -14,8 +16,8 @@ export const menuItems = [
         url: 'web-mobile'
       },
       {
-        title: 'Embeded ',
-        url: 'embeded',
+        title: 'Tech',
+        url: 'tech',
         submenu: [
           {
             title: 'Frontend',
@@ -25,12 +27,23 @@ export const menuItems = [
             title: 'Backend',
             submenu: [
               {
-                title: 'Django',
-                url: 'django',
+                title: 'Python',
+                url:"python"
+
+               
               },
               {
-                title: 'NodeJs',
-                url: 'node',
+                title: 'Javascript',
+                submenu:[
+                  {
+                  title:'Expressjs',
+                  url:'expressjs'
+                },
+                {
+                  title:"reactjs",
+                  url:"reactjs"
+                }
+                ],
               },
             ],
           },
@@ -58,7 +71,6 @@ export const menuItems = [
   },
 ];
 
-import MenuItems from '../Dropdown/MenuItems';
 const Navbar = () => {
   return (
     <nav>

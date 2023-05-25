@@ -1,3 +1,5 @@
+"use client"
+
 import MenuItems from './MenuItems'
 
 const Dropdown = ({ submenus, dropdown, depthLevel }) => {

@@ -3,7 +3,7 @@
 "use client"
 import { useState, useEffect, useRef } from 'react';
 import Dropdown from './Dropdown';
-import Link from 'next/link';
+import { NavLink as Link } from 'react-router-dom';
 
 
 const MenuItems = ({ items, depthLevel }) => {
@@ -61,7 +61,7 @@ const MenuItems = ({ items, depthLevel }) => {
             {window.innerWidth < 960 && depthLevel === 0 ? (
               items.title
             ) : (
-              <Link href={items.url}>{items.title}</Link>
+              <Link to={items.url}>{items.title}</Link>
             )}
 
             {depthLevel > 0 &&
@@ -100,7 +100,7 @@ const MenuItems = ({ items, depthLevel }) => {
           />
         </>
       ) : (
-        <Link href={items.url}>{items.title}</Link>
+        <Link to={items.url}>{items.title}</Link>
       )}
     </li>
   );
